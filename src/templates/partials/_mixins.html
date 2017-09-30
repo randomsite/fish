@@ -1,0 +1,13 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro pl(width, height) %}
+<img src="http://via.placeholder.com/{{width}}x{{height}}/B6BFCA/21232d/">
+{% endmacro %}
+
+{% macro apl(width, height) %}
+<a href="http://via.placeholder.com/{{width*4}}x{{height*4}}/B6BFCA/21232d/">
+	<img src="http://via.placeholder.com/{{width}}x{{height}}/B6BFCA/21232d/">
+</a>
+{% endmacro %}

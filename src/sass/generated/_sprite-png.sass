@@ -1,0 +1,149 @@
+$icons: (0:0)
+$icons: map-merge($icons,('Layer 1': (X: -2711px, Y:-2082px, W: 91px, H: 21px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 2': (X: -2431px, Y:-2133px, W: 80px, H: 34px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 3': (X: -3115px, Y:-2082px, W: 83px, H: 10px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 4': (X: -2617px, Y:-2082px, W: 84px, H: 27px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 5': (X: -2523px, Y:-2082px, W: 84px, H: 33px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 6': (X: -2910px, Y:-2082px, W: 95px, H: 15px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 7': (X: -2812px, Y:-2082px, W: 88px, H: 17px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 8': (X: -3015px, Y:-2082px, W: 90px, H: 15px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Layer 9': (X: -2431px, Y:-2082px, W: 82px, H: 41px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('bg-bottom': (X: -2210px, Y:0px, W: 2200px, H: 2072px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('bg': (X: 0px, Y:0px, W: 2200px, H: 3663px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('icon-calendar': (X: -2521px, Y:-2133px, W: 24px, H: 22px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('icon-play': (X: -2210px, Y:-2207px, W: 117px, H: 126px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('icon-send': (X: -2555px, Y:-2133px, W: 24px, H: 21px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('icon-video': (X: -2589px, Y:-2133px, W: 17px, H: 12px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo-footer': (X: -2210px, Y:-2082px, W: 211px, H: 115px, TW: 4410px, TH: 3663px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-Layer 1
+//  width: 91px
+//  height: 21px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2711px -2082px
+//
+//.icon-Layer 2
+//  width: 80px
+//  height: 34px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2431px -2133px
+//
+//.icon-Layer 3
+//  width: 83px
+//  height: 10px
+//  background-image: url('../img/sprite.png')
+//  background-position: -3115px -2082px
+//
+//.icon-Layer 4
+//  width: 84px
+//  height: 27px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2617px -2082px
+//
+//.icon-Layer 5
+//  width: 84px
+//  height: 33px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2523px -2082px
+//
+//.icon-Layer 6
+//  width: 95px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2910px -2082px
+//
+//.icon-Layer 7
+//  width: 88px
+//  height: 17px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2812px -2082px
+//
+//.icon-Layer 8
+//  width: 90px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -3015px -2082px
+//
+//.icon-Layer 9
+//  width: 82px
+//  height: 41px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2431px -2082px
+//
+//.icon-bg-bottom
+//  width: 2200px
+//  height: 2072px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2210px 0px
+//
+//.icon-bg
+//  width: 2200px
+//  height: 3663px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-icon-calendar
+//  width: 24px
+//  height: 22px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2521px -2133px
+//
+//.icon-icon-play
+//  width: 117px
+//  height: 126px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2210px -2207px
+//
+//.icon-icon-send
+//  width: 24px
+//  height: 21px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2555px -2133px
+//
+//.icon-icon-video
+//  width: 17px
+//  height: 12px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2589px -2133px
+//
+//.icon-logo-footer
+//  width: 211px
+//  height: 115px
+//  background-image: url('../img/sprite.png')
+//  background-position: -2210px -2082px
+//
