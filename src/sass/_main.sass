@@ -221,11 +221,6 @@ input[type="search"].sb-search-input
 
 
 
-.block
-	padding: 20px 0 30px
-
-.block-bordered
-	border-bottom: 1px solid #eeeff0
 .block-bordered
 	&.news-block-inline
 		&:last-child
@@ -236,7 +231,10 @@ input[type="search"].sb-search-input
 	font-family: Lato
 	font-size: 31px
 	font-weight: 500
-	margin-bottom: 10px
+	margin: 0 0 10px
+	padding: 0
+	border: 0
+	vertical-align: baseline
 	a
 		float: right
 		color: #646673
@@ -549,9 +547,12 @@ input[type="search"].sb-search-input
 .nav-footer
 	padding: 40px 0 0
 	ul
+		margin: 0
+		padding: 0
 		li
 			display: inline-block
 			margin-right: 20px
+			list-style-type: none
 			a
 				color: #fff
 				font-family: FiraSans
@@ -566,9 +567,12 @@ input[type="search"].sb-search-input
 	text-align: right
 	padding: 45px 0 0
 	ul
+		margin: 0
+		padding: 0
 		li
 			display: inline-block
 			margin-left: 10px
+			list-style-type: none
 .social-item
 	display: inline-block
 	width: 30px
@@ -610,3 +614,11 @@ input[type="search"].sb-search-input
 		background-color: #2f7cc9
 	.modal-content
 		border: 0
+
+.gallery
+	.news-block
+		padding-bottom: 15px
+		margin-bottom: 15px
+.dfw
+	display: flex
+	flex-wrap: wrap

@@ -1,0 +1,87 @@
+{% set title = 'Single page' %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- BEGIN content -->
+	<div class="content">
+		<div class="container">
+
+		<div class="row">
+			<div class="col-xs-9 main">
+				<!-- BEGIN block -->
+				<div class="block">
+						<h1 class="block-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, pariatur.</h1>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vitae ea, at! Repellendus delectus voluptatum impedit eligendi adipisci vitae totam iure ea minus error quo rerum iste labore, aspernatur dolores assumenda fuga at. Magni sequi impedit voluptas dolore praesentium dicta blanditiis architecto repellat velit deserunt, illum nam, nesciunt, enim reiciendis.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vitae ea, at! Repellendus delectus voluptatum impedit eligendi adipisci vitae totam iure ea minus error quo rerum iste labore, aspernatur dolores assumenda fuga at. Magni sequi impedit voluptas dolore praesentium dicta blanditiis architecto repellat velit deserunt, illum nam, nesciunt, enim reiciendis.</p>
+						{{mixins.apl(870, 500)}}
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vitae ea, at! Repellendus delectus voluptatum impedit eligendi adipisci vitae totam iure ea minus error quo rerum iste labore, aspernatur dolores assumenda fuga at. Magni sequi impedit voluptas dolore praesentium dicta blanditiis architecto repellat velit deserunt, illum nam, nesciunt, enim reiciendis.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vitae ea, at! Repellendus delectus voluptatum impedit eligendi adipisci vitae totam iure ea minus error quo rerum iste labore, aspernatur dolores assumenda fuga at. Magni sequi impedit voluptas dolore praesentium dicta blanditiis architecto repellat velit deserunt, illum nam, nesciunt, enim reiciendis.</p>
+
+						<h1>h1. Lorem heading</h1>
+						<h2>h2. Lorem heading</h2>
+						<h3>h3. Lorem heading</h3>
+						<h4>h4. Lorem heading</h4>
+
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>lorem</th>
+									<th>lorem</th>
+									<th>lorem</th>
+									<th>lorem</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for i in range(0,10) %}
+								<tr>
+									<td>lorem</td>
+									<td>lorem</td>
+									<td>lorem</td>
+									<td>lorem</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+
+						<blockquote>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat rem alias adipisci aut ab, facilis quae officiis excepturi! Illo, ipsum!
+						</blockquote>
+
+						<ul>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+						</ul>
+
+						<ol>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+						</ol>
+
+				</div>
+				<!-- END block -->
+			</div>
+
+			<!-- BEGIN sidebar -->
+			<div class="col-xs-3 sidebar">
+				<div class="block-title">Сайдбар</div>
+				somthing else
+			</div>
+			<!-- END sidebar -->
+
+		</div>
+
+		</div>
+	</div>
+	<!-- END content -->
+
+{% endblock %}

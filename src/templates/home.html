@@ -1,6 +1,4 @@
----
-title: Home page
----
+{% set title = 'Home page' %}
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
@@ -305,7 +303,7 @@ title: Home page
 			<div class="container">
 				<div class="block-title">Фотогалерея<a href="#">Все фотографии<span class="icon-arrow-right"></span></a></div>
 			</div>
-			<div class="gallery clearfix">
+			<div class="gallery-block clearfix">
 				{% for i in range(0,5) %}
 				<div class="gallery-item">
 					{{mixins.apl(261,164)}}

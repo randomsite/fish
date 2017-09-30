@@ -1,0 +1,55 @@
+{% set title = 'Category page' %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- BEGIN content -->
+	<div class="content">
+		<div class="container">
+
+		<div class="row">
+			<div class="col-xs-9 main">
+				<!-- BEGIN block -->
+				<div class="block block-bordered">
+						<h1 class="block-title">Категория</h1>
+						{% for i in range(0,10) %}
+							<!-- BEGIN news-block -->
+							<div class="news-block">
+								<div class="row">
+									<div class="col-xs-3">
+										<div class="news-image">
+											<a href="">
+												{{mixins.pl(269,172)}}
+												<div class="is-video">
+													<span class="is-video-icon"></span><span class="is-video-text">есть видео</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<div class="news-date">02.02.2017<a href="#" class="news-author">Александр Савин</a></div>
+										<div class="news-title"><a href="#">Андрей Питерцов и Дмитрий Елисеев — Победители Второго этапа PAL 2017!</a></div>
+										<div class="news-descr">Рыбалка делится на любительскую и спортивную. В отличие от рыболовства, рыбалка — развлечение, досуг, вид отдыха, туризма и спорта.</div>
+									</div>
+								</div>
+							</div>
+							<!-- END news-block -->
+						{% endfor %}
+				</div>
+				<!-- END block -->
+			</div>
+
+			<!-- BEGIN sidebar -->
+			<div class="col-xs-3 sidebar">
+				<div class="block-title">Сайдбар</div>
+				somthing else
+			</div>
+			<!-- END sidebar -->
+
+		</div>
+
+		</div>
+	</div>
+	<!-- END content -->
+
+{% endblock %}

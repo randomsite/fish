@@ -1,0 +1,36 @@
+{% set title = 'Gallery page' %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- BEGIN content -->
+	<div class="content">
+
+		<!-- BEGIN block -->
+		<div class="block gallery">
+			<div class="container">
+				<h1 class="block-title">Категория</h1>
+				<div class="row dfw">
+					{% for i in range(0,12) %}
+					<div class="col-xs-4">
+						<!-- BEGIN news-block -->
+						<div class="news-block block-bordered">
+							<div class="news-image">
+								{{mixins.apl(370,240)}}
+							</div>
+							<div class="news-date">02.02.2017<a href="#" class="news-author">Александр Савин</a></div>
+							<div class="news-title"><a href="#">Андрей Питерцов и Дмитрий Елисеев</a></div>
+							<div class="news-descr">В отличие от рыболовства, рыбалка — развлечение, досуг, вид отдыха, туризма и спорта.</div>
+						</div>
+						<!-- END news-block -->
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<!-- END block -->
+
+	</div>
+	<!-- END content -->
+
+{% endblock %}
